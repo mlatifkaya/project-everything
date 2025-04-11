@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paylaş - Her Şey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta name="description" content="Düşüncelerinizi, fotoğraflarınızı veya videolarınızı Her Şey platformunda paylaşın" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Her Şey</h1>
+        <p class="tagline">Karanlıkta bile bir ışık vardır...</p>
+        <nav>
+          <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+          <a href="about.html"><i class="fas fa-info-circle"></i> Hakkında</a>
+          <a href="share.html" class="active"><i class="fas fa-share-alt"></i> Paylaş</a>
+          <a href="community.html"><i class="fas fa-users"></i> Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="share-content">
+        <h2>Hikayeni Paylaş</h2>
+        <p class="share-intro">Düşüncelerinizi, duygularınızı ve deneyimlerinizi paylaşın. Fotoğraf, video veya ses kaydı ekleyebilirsiniz.</p>
+        
+        <div class="upload-section">
+          <form id="shareForm" method="post" enctype="multipart/form-data">
+            <div class="form-preview">
+              <div id="previewContainer" class="preview-container">
+                <p class="empty-preview">Önizleme burada görünecek</p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="messageInput"><i class="fas fa-pen"></i> Mesajınızı Yazın:</label>
+              <textarea
+                id="messageInput"
+                name="message"
+                placeholder="Mesajınızı buraya yazın..."
+                required
+                maxlength="1000"
+              ></textarea>
+              <div class="char-counter"><span id="charCount">0</span>/1000</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="fileUpload"><i class="fas fa-cloud-upload-alt"></i> Dosya Yükle:</label>
+              <div class="file-upload-wrapper">
+                <input
+                  type="file"
+                  id="fileUpload"
+                  name="files"
+                  accept="video/*, image/*, audio/*"
+                  multiple
+                  class="file-upload-input"
+                />
+                <div class="file-upload-button">
+                  <i class="fas fa-file-upload"></i> Dosya Seç
+                </div>
+                <span id="selectedFiles" class="selected-files">Dosya seçilmedi</span>
+              </div>
+              <div class="file-types">Desteklenen formatlar: JPEG, PNG, GIF, MP4, MP3</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="tagsInput"><i class="fas fa-tags"></i> Etiketler:</label>
+              <input 
+                type="text" 
+                id="tagsInput" 
+                name="tags" 
+                placeholder="Etiketleri virgülle ayırın (örn: umut, dayanışma)"
+              />
+            </div>
+            
+            <div class="form-actions">
+              <button type="reset" class="btn secondary-btn"><i class="fas fa-undo"></i> Temizle</button>
+              <button type="submit" class="btn primary-btn"><i class="fas fa-paper-plane"></i> Paylaş</button>
+            </div>
+          </form>
+          <div id="uploadStatus" class="upload-status"></div>
+        </div>
+      </section>
+
+      <section class="share-guidelines">
+        <h2>Paylaşım Kuralları</h2>
+        <div class="guidelines">
+          <div class="guideline-item">
+            <i class="fas fa-check-circle"></i>
+            <p>Pozitif ve yapıcı içerikler paylaşın.</p>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-check-circle"></i>
+            <p>Başkalarının hikayelerine saygı gösterin.</p>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-times-circle"></i>
+            <p>Nefret söylemi, ayrımcılık veya taciz içeren paylaşımlar yapmayın.</p>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-times-circle"></i>
+            <p>Kişisel bilgileri paylaşmaktan kaçının.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-shares">
+        <h2>Son Paylaşımlar</h2>
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="image">Fotoğraflar</button>
+          <button class="filter-btn" data-filter="video">Videolar</button>
+          <button class="filter-btn" data-filter="audio">Sesler</button>
+        </div>
+        <div id="postContainer" class="post-container">
+          <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Yükleniyor...</div>
+        </div>
+        <div class="pagination">
+          <button id="loadMorePosts" class="btn secondary-btn">Daha Fazla Göster</button>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Her Şey</h3>
+          <p>Karanlıkta bile bir ışık vardır. Umut her zaman vardır.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Bağlantılar</h3>
+          <a href="index.html">Ana Sayfa</a>
+          <a href="about.html">Hakkında</a>
+          <a href="share.html">Paylaş</a>
+          <a href="community.html">Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </div>
+        <div class="footer-section">
+          <h3>Bize Ulaşın</h3>
+          <a href="mailto:iletisim@hersey.com"><i class="fas fa-envelope"></i> iletisim@hersey.com</a>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Her Şey. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <div id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

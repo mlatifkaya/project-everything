@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Her Şey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta name="description" content="Her Şey - Karanlıkta bile bir ışık vardır. Duygularınızı paylaşın, umut verin, umut alın." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Her Şey</h1>
+        <p class="tagline">Karanlıkta bile bir ışık vardır...</p>
+        <nav>
+          <a href="index.html" class="active"><i class="fas fa-home"></i> Ana Sayfa</a>
+          <a href="about.html"><i class="fas fa-info-circle"></i> Hakkında</a>
+          <a href="share.html"><i class="fas fa-share-alt"></i> Paylaş</a>
+          <a href="community.html"><i class="fas fa-users"></i> Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="intro">
+        <h2>Hoş Geldiniz</h2>
+        <p>
+          Bu platform, hayatın zorluklarına rağmen umudu kaybetmeyenler için bir
+          sığınaktır. Paylaşımlarınızla başkalarına ilham olun ve birlikte
+          güçlenelim.
+        </p>
+        <div class="action-buttons">
+          <a href="share.html" class="btn primary-btn"><i class="fas fa-pen"></i> Hikayeni Paylaş</a>
+          <a href="community.html" class="btn secondary-btn"><i class="fas fa-users"></i> Topluluğa Katıl</a>
+        </div>
+      </section>
+
+      <section class="featured-post">
+        <h2>Öne Çıkan Paylaşım</h2>
+        <div id="featuredPost" class="post featured">
+          <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Yükleniyor...</div>
+        </div>
+      </section>
+
+      <section class="recent-posts">
+        <h2>Son Paylaşımlar</h2>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="image">Fotoğraflar</button>
+          <button class="filter-btn" data-filter="video">Videolar</button>
+          <button class="filter-btn" data-filter="audio">Sesler</button>
+        </div>
+        <div id="postList" class="post-list">
+          <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Yükleniyor...</div>
+        </div>
+        <div class="pagination">
+          <button id="loadMoreBtn" class="btn secondary-btn">Daha Fazla Göster</button>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <h2>Bültenimize Abone Olun</h2>
+        <p>Yeni paylaşımlardan ve güncellemelerden haberdar olmak için e-posta adresinizi girin.</p>
+        <form id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="E-posta adresiniz" required>
+          <button type="submit" class="btn primary-btn">Abone Ol</button>
+        </form>
+        <div id="newsletterMessage" class="message"></div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Her Şey</h3>
+          <p>Karanlıkta bile bir ışık vardır. Umut her zaman vardır.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Bağlantılar</h3>
+          <a href="index.html">Ana Sayfa</a>
+          <a href="about.html">Hakkında</a>
+          <a href="share.html">Paylaş</a>
+          <a href="community.html">Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </div>
+        <div class="footer-section">
+          <h3>Bize Ulaşın</h3>
+          <a href="mailto:iletisim@hersey.com"><i class="fas fa-envelope"></i> iletisim@hersey.com</a>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Her Şey. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <div id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

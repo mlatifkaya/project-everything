@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topluluk - Her Şey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta name="description" content="Her Şey topluluğuna katılın ve diğer üyelerle etkileşime geçin" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Her Şey</h1>
+        <p class="tagline">Karanlıkta bile bir ışık vardır...</p>
+        <nav>
+          <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+          <a href="about.html"><i class="fas fa-info-circle"></i> Hakkında</a>
+          <a href="share.html"><i class="fas fa-share-alt"></i> Paylaş</a>
+          <a href="community.html" class="active"><i class="fas fa-users"></i> Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="community-welcome">
+        <h2>Topluluğumuza Hoş Geldiniz</h2>
+        <p>Burada birbirimizi desteklediğimiz, paylaştığımız ve umut bulduğumuz bir alan oluşturuyoruz. Katılmak ve diğer üyelerle bağlantı kurmak için aşağıdaki etkinliklere göz atın.</p>
+      </section>
+
+      <section class="community-events">
+        <h2>Yaklaşan Etkinlikler</h2>
+        <div class="event-container">
+          <div class="event-card">
+            <div class="event-date">
+              <span class="day">25</span>
+              <span class="month">Mart</span>
+            </div>
+            <div class="event-info">
+              <h3>Online Destek Grubu Toplantısı</h3>
+              <p class="event-time"><i class="fas fa-clock"></i> 19:00 - 20:30</p>
+              <p class="event-desc">Haftalık online destek grubu toplantımızda birlikte güçlüklerimizi paylaşacağız.</p>
+              <a href="#" class="btn primary-btn event-btn">Katıl</a>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <div class="event-date">
+              <span class="day">02</span>
+              <span class="month">Nisan</span>
+            </div>
+            <div class="event-info">
+              <h3>Yaratıcı Yazma Atölyesi</h3>
+              <p class="event-time"><i class="fas fa-clock"></i> 14:00 - 16:00</p>
+              <p class="event-desc">Duygularımızı yazıya dökerek ifade etmeyi öğrenelim.</p>
+              <a href="#" class="btn primary-btn event-btn">Katıl</a>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Nisan</span>
+            </div>
+            <div class="event-info">
+              <h3>Fotoğraf Paylaşım Günü</h3>
+              <p class="event-time"><i class="fas fa-clock"></i> Tüm Gün</p>
+              <p class="event-desc">"Umut" temalı fotoğraflarımızı paylaşarak ilham alalım.</p>
+              <a href="#" class="btn primary-btn event-btn">Katıl</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-forum">
+        <h2>Tartışma Forumu</h2>
+        <div class="forum-container">
+          <div class="forum-tabs">
+            <button class="forum-tab active" data-tab="popular">Popüler</button>
+            <button class="forum-tab" data-tab="recent">Son Konular</button>
+            <button class="forum-tab" data-tab="unanswered">Yanıtsız</button>
+          </div>
+          
+          <div class="forum-content active" id="popular">
+            <div class="forum-post">
+              <div class="post-votes">
+                <i class="fas fa-arrow-up vote-up"></i>
+                <span class="vote-count">42</span>
+                <i class="fas fa-arrow-down vote-down"></i>
+              </div>
+              <div class="post-content">
+                <h3><a href="#">Kriz anında kendinize nasıl umut aşılıyorsunuz?</a></h3>
+                <p class="post-meta">
+                  <span class="post-author"><i class="fas fa-user"></i> Ayşe Demir</span>
+                  <span class="post-time"><i class="fas fa-clock"></i> 3 gün önce</span>
+                  <span class="post-comments"><i class="fas fa-comment"></i> 28 yorum</span>
+                </p>
+                <p class="post-excerpt">Zor günlerde kendime moral vermek için kullandığım teknikler...</p>
+                <div class="post-tags">
+                  <span class="tag">umut</span>
+                  <span class="tag">kriz</span>
+                  <span class="tag">motivasyon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="forum-content" id="recent">
+            <div class="forum-post">
+              <div class="post-votes">
+                <i class="fas fa-arrow-up vote-up"></i>
+                <span class="vote-count">12</span>
+                <i class="fas fa-arrow-down vote-down"></i>
+              </div>
+              <div class="post-content">
+                <h3><a href="#">Meditasyon deneyimleriniz</a></h3>
+                <p class="post-meta">
+                  <span class="post-author"><i class="fas fa-user"></i> Zeynep Aktaş</span>
+                  <span class="post-time"><i class="fas fa-clock"></i> 8 saat önce</span>
+                  <span class="post-comments"><i class="fas fa-comment"></i> 5 yorum</span>
+                </p>
+                <p class="post-excerpt">Meditasyon yapmak benim hayatımda büyük bir değişiklik yarattı...</p>
+                <div class="post-tags">
+                  <span class="tag">meditasyon</span>
+                  <span class="tag">zihin</span>
+                  <span class="tag">rahatlama</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="forum-content" id="unanswered">
+            <div class="forum-post">
+              <div class="post-votes">
+                <i class="fas fa-arrow-up vote-up"></i>
+                <span class="vote-count">3</span>
+                <i class="fas fa-arrow-down vote-down"></i>
+              </div>
+              <div class="post-content">
+                <h3><a href="#">Profesyonel yardım almanın önemi</a></h3>
+                <p class="post-meta">
+                  <span class="post-author"><i class="fas fa-user"></i> Deniz Şahin</span>
+                  <span class="post-time"><i class="fas fa-clock"></i> 1 gün önce</span>
+                  <span class="post-comments"><i class="fas fa-comment"></i> 0 yorum</span>
+                </p>
+                <p class="post-excerpt">Psikolojik destek almak benim için çok önemliydi...</p>
+                <div class="post-tags">
+                  <span class="tag">psikoloji</span>
+                  <span class="tag">terapi</span>
+                  <span class="tag">sağlık</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="forum-actions">
+          <a href="#" class="btn primary-btn"><i class="fas fa-plus"></i> Yeni Konu Başlat</a>
+          <a href="#" class="btn secondary-btn"><i class="fas fa-list"></i> Tüm Konuları Gör</a>
+        </div>
+      </section>
+      
+      <section class="community-members">
+        <h2>Aktif Üyeler</h2>
+        <div class="members-container">
+          <div class="member-card">
+            <img src="/api/placeholder/80/80" alt="Ayşe Demir" class="member-avatar">
+            <h3>Ayşe Demir</h3>
+            <p class="member-level">Topluluk Yöneticisi</p>
+            <p class="member-stats"><i class="fas fa-star"></i> 120 katkı</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="/api/placeholder/80/80" alt="Mehmet Kaya" class="member-avatar">
+            <h3>Mehmet Kaya</h3>
+            <p class="member-level">Editör</p>
+            <p class="member-stats"><i class="fas fa-star"></i> 95 katkı</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="/api/placeholder/80/80" alt="Zeynep Aktaş" class="member-avatar">
+            <h3>Zeynep Aktaş</h3>
+            <p class="member-level">Aktif Üye</p>
+            <p class="member-stats"><i class="fas fa-star"></i> 78 katkı</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="/api/placeholder/80/80" alt="Ali Yıldız" class="member-avatar">
+            <h3>Ali Yıldız</h3>
+            <p class="member-level">Aktif Üye</p>
+            <p class="member-stats"><i class="fas fa-star"></i> 62 katkı</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="/api/placeholder/80/80" alt="Siz" class="member-avatar">
+            <h3>Siz</h3>
+            <p class="member-level">Katılın</p>
+            <p class="member-stats"><i class="fas fa-plus"></i> Şimdi</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Her Şey</h3>
+          <p>Karanlıkta bile bir ışık vardır. Umut her zaman vardır.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Bağlantılar</h3>
+          <a href="index.html">Ana Sayfa</a>
+          <a href="about.html">Hakkında</a>
+          <a href="share.html">Paylaş</a>
+          <a href="community.html">Topluluk</a>
+          <a href="register.html" ><i class="fas fa-user-plus"></i> Kayıt Ol / Giriş Yap</a>
+        </div>
+        <div class="footer-section">
+          <h3>Bize Ulaşın</h3>
+          <a href="mailto:iletisim@hersey.com"><i class="fas fa-envelope"></i> iletisim@hersey.com</a>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Her Şey. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <div id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
