@@ -1,4 +1,4 @@
-# Her Şey - nyxeverix.com
+# Her Şey - www.nyxeverix.com
 
 **Her Şey**, kullanıcıların deneyimlerini paylaşabileceği, destek bulabileceği ve bir topluluk oluşturarak birlikte güçlendiği bir platformdur. 2025 yılında kurulan bu proje, zor zamanlar geçiren bireyler için güvenli bir alan yaratmayı amaçlamaktadır.
 ## Özellikler
